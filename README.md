@@ -1,4 +1,6 @@
-# WEB+DB PRESS Vol.125 「Scala 3 入門」サンプルコード
+# wdb-scala3
+
+WEB+DB PRESS Vol.125の記事「Scala 3 クイックツアー」で掲載しているサンプルコードです。
 
 ## ソースコードディレクトリについて
 
