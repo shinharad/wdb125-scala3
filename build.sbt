@@ -1,8 +1,9 @@
 // 本稿が対象とするScalaのバージョン
 ThisBuild / scalaVersion := "3.0.2"
 
-// 2021/10にScala 3.1安定版のリリースが予定されています。
-// ThisBuild / scalaVersion := "3.1.0-RC3"
+// 2021/10にScala 3.1.0がリリースされました。
+// Scala 3.1.xは後方互換性があるため、本稿のサンプルコードはそのまま実行することができます。
+// ThisBuild / scalaVersion := "3.1.0"
 
 ThisBuild / scalacOptions ++= Seq(
   "-deprecation",
