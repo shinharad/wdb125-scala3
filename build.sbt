@@ -2,7 +2,7 @@
 ThisBuild / scalaVersion := "3.0.2"
 
 // 2021/10にScala 3.1.0がリリースされました。
-// Scala 3.1.xは後方互換性があるため、本稿のサンプルコードはそのまま実行することができます。
+// Scala 3.1.xは後方互換性があるため、本稿で紹介しているソースコードはそのまま実行することができます。
 // ThisBuild / scalaVersion := "3.1.0"
 
 ThisBuild / scalacOptions ++= Seq(
@@ -21,7 +21,7 @@ lazy val root =
     )
 
 // コンパイラオプションの`-source:future`を指定したプロジェクト
-// infix修飾子のサンプルコードが格納されています。
+// infix修飾子のソースコードが格納されています。
 lazy val `src-future` =
   project
     .in(file("src-future"))

@@ -1,20 +1,45 @@
 # wdb-scala3
 
-WEB+DB PRESS Vol.125の記事「Scala 3 クイックツアー」で掲載しているサンプルコードです。
+[WEB+DB PRESS Vol.125](https://gihyo.jp/magazine/wdpress/archive/2021/vol125)の一般記事「新登場！Scala 3 クイックツアー」で掲載しているソースコードです。
+
+
+- [記事の補足](#記事の補足)
+- [記事の誤り](#記事の誤り)
+- [ソースコードディレクトリについて](#ソースコードディレクトリについて)
+  - [srcディレクトリ](#srcディレクトリ)
+  - [src-futureディレクトリ](#src-futureディレクトリ)
+- [Scala 3プログラムの実行方法](#scala-3プログラムの実行方法)
+  - [ブラウザで実行する](#ブラウザで実行する)
+  - [ローカル環境を構築して実行する](#ローカル環境を構築して実行する)
+
+
+## 記事の補足
+
+1. Scala 3.1.0でも動作確認しています
+    - 記事で対象としているScalaのバージョンは、執筆時点（2021/9）の最新版である 3.0.2 としていますが、2021/10にリリースされたScala 3.1.0でも動作確認しています。
+2. `scala.App`トレイトの注意点
+    - 記事の中では紹介していませんが、`scala.App`トレイトを使用したメインメソッドの実装は、将来的に非推奨となる予定です。これは、`scala.App`トレイトが内部的に利用している`DelayedInit`というコンパイル時の特別な仕組みが廃止され、部分的に機能しなくなったためです。代替手段は、オブジェクトの中で明示的に`def main(args: Array[String]): Unit`を実装する方法か、記事の中で紹介している`@main`で実装する方法を使用します。
+    - 詳細はこちらを参照してください。
+        - [Main Methods - Scala 3 compared to Scala 2](https://docs.scala-lang.org/scala3/book/methods-main-methods.html#scala-3-compared-to-scala-2)
+        - [Dropped: DelayedInit](https://docs.scala-lang.org/scala3/reference/dropped-features/delayed-init.html)
+
+## 記事の誤り
+
+[サポートページ](https://gihyo.jp/magazine/wdpress/archive/2021/vol125/support)を参照してください。
 
 ## ソースコードディレクトリについて
 
 ### srcディレクトリ
 
-サンプルコードを配置しています。
+記事で紹介しているソースコードを配置しています。
 
 ### src-futureディレクトリ
 
-コンパイラオプションに`-source:future`を設定したプロジェクトです。infix修飾子のサンプルコードを配置しています。
+コンパイラオプションに`-source:future`を設定したプロジェクトです。infix修飾子のソースコードを配置しています。
 
 ## Scala 3プログラムの実行方法
 
-サンプルコードを実行する方法を2つ紹介します。
+Scala 3のプログラムを実行する方法を2つ紹介します。
 
 ### ブラウザで実行する
 
@@ -41,7 +66,7 @@ IDEは、JetBrains社の[IntellJ IDEA](https://www.jetbrains.com/ja-jp/idea/down
 
 また、Scala Language Serverの[Metals](https://scalameta.org/metals/)を使用することで、Visual Studio CodeやVim、Sublime TextなどのエディタをIDEのような高機能な開発環境にすることもできます。
 
-準備が整ったら試しにターミナルでメインメソッドのサンプルコードを実行してみましょう。
+準備が整ったら試しにターミナルでメインメソッドのコードを実行してみましょう。
 
 ```
 $ sbt "runMain show 1"
